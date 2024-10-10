@@ -8,8 +8,8 @@ from google.oauth2.service_account import Credentials
 
 scopes = [ "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive"]
-creds = Credentials.from_service_account_file("cred.json", scopes=scopes)
-client = gspread.authorize("/etc/secrets/cred.json")
+creds = Credentials.from_service_account_file("/etc/secrets/cred.json", scopes=scopes)
+client = gspread.authorize(creds)
 
 sheet_id = "1v21AGPdkgt_TAC9y9XfVI5Hztr2JXPn6KF9QXo53l50"
 # # נסי להדפיס את ה-ID לפני השימוש בו
